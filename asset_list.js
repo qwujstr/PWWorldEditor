@@ -1290,12 +1290,6 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
-    "label": "PlayNoteB #36329",
-    "folder": "block",
-    "file": "PlayNoteB #36329.png",
-    "type": "block"
-  },
-  {
     "label": "PlayNoteB",
     "folder": "block",
     "file": "PlayNoteB.png",

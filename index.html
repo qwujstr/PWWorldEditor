@@ -41,10 +41,12 @@
         <div class="tool-group">
             <button id="bucket-btn" class="icon-text-btn"><img src="textures/ui/bucket.png"><span>Bucket</span></button>
             <button id="shapes-btn" class="icon-text-btn"><img src="textures/ui/banana.png"><span>Shapes</span></button>
+            <button id="pick-btn" class="icon-text-btn"><img src="textures/ui/PaintBrush.png"><span>Pick</span></button>
         </div>
 
         <div class="tool-group">
             <button id="clear-menu-btn" class="icon-text-btn"><img src="textures/ui/buttonIcon_trash.png"><span>Edit</span></button>
+            <button id="screenshot-btn" class="icon-text-btn"><img src="textures/ui/PanoramaCamera.png"><span>Screenshot</span></button>
             <button id="save-btn" class="icon-text-btn"><img src="textures/ui/buttonIcon_download.png"><span>Save</span></button>
             <button id="import-btn" class="icon-text-btn"><img src="textures/ui/buttonIcon_import.png"><span>Import</span></button>
             <input type="file" id="file-input" class="hidden" accept=".json">
@@ -54,9 +56,16 @@
     <div id="help-popup" class="hidden menu-popup">
         <div class="popup-header"><h3>Editor Help</h3><button class="close-btn-fancy">×</button></div>
         <div style="font-size: 14px; line-height: 1.6; color: #ccc;">
-            <p>- Move: Middle Mouse Scroll to pan.</p>
-            <p>- Delete: Right Click to remove blocks.</p>
-            <p>- Undo: CTRL + Z.</p>
+            <p><strong>Controls:</strong></p>
+            <p>- Middle Mouse Scroll to pan/zoom.</p>
+            <p>- Right Click to remove blocks.</p>
+            <p>- Mouse Scroll to move around.</p>
+            <p><strong>Hotkeys:</strong></p>
+            <p>- <kbd>[F]</kbd>: Bucket Tool</p>
+            <p>- <kbd>[S]</kbd>: Shapes Tool</p>
+            <p>- <kbd>[K]</kbd>: Block Pick Tool</p>
+            <p>- <kbd>[1]-[9]</kbd>: Select Hotbar Slots</p>
+            <p>- [CTRL] + [Z] to undo.</p>
         </div>
     </div>
 

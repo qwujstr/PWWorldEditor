@@ -30,6 +30,12 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "Alien Soil Block Alt",
+    "folder": "block",
+    "file": "Alien Soil Block_Alt.png",
+    "type": "block"
+  },
+  {
     "label": "Alien Stone Block",
     "folder": "block",
     "file": "Alien Stone Block.png",
@@ -480,6 +486,18 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "End Lava Rock",
+    "folder": "block",
+    "file": "End Lava Rock.png",
+    "type": "block"
+  },
+  {
+    "label": "End Lava",
+    "folder": "block",
+    "file": "End Lava.png",
+    "type": "block"
+  },
+  {
     "label": "Enforced Hull Block",
     "folder": "block",
     "file": "Enforced Hull Block.png",
@@ -546,6 +564,12 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "Gem Soil Alt",
+    "folder": "block",
+    "file": "Gem Soil_Alt.png",
+    "type": "block"
+  },
+  {
     "label": "Gingerbread Block",
     "folder": "block",
     "file": "Gingerbread Block.png",
@@ -570,9 +594,15 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
-    "label": "Golden Skull Block",
+    "label": "GoldenSkullBlock",
     "folder": "block",
-    "file": "Golden Skull Block.png",
+    "file": "GoldenSkullBlock.png",
+    "type": "block"
+  },
+  {
+    "label": "GoldenSkullBlock Glow",
+    "folder": "block",
+    "file": "GoldenSkullBlock_Glow.png",
     "type": "block"
   },
   {
@@ -768,6 +798,12 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "Legendary Soil Block Alt",
+    "folder": "block",
+    "file": "Legendary Soil Block_Alt.png",
+    "type": "block"
+  },
+  {
     "label": "Light Blue Block",
     "folder": "block",
     "file": "Light Blue Block.png",
@@ -867,6 +903,18 @@ const ASSET_LIST = [
     "label": "Moon Soil",
     "folder": "block",
     "file": "Moon Soil.png",
+    "type": "block"
+  },
+  {
+    "label": "MoonRock Alt",
+    "folder": "block",
+    "file": "MoonRock_Alt.png",
+    "type": "block"
+  },
+  {
+    "label": "MoonSoil Alt",
+    "folder": "block",
+    "file": "MoonSoil_Alt.png",
     "type": "block"
   },
   {
@@ -1230,6 +1278,84 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "PlayNoteA",
+    "folder": "block",
+    "file": "PlayNoteA.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteASharp",
+    "folder": "block",
+    "file": "PlayNoteASharp.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteB #36329",
+    "folder": "block",
+    "file": "PlayNoteB #36329.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteB",
+    "folder": "block",
+    "file": "PlayNoteB.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteC",
+    "folder": "block",
+    "file": "PlayNoteC.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteCSharp",
+    "folder": "block",
+    "file": "PlayNoteCSharp.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteD",
+    "folder": "block",
+    "file": "PlayNoteD.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteDSharp",
+    "folder": "block",
+    "file": "PlayNoteDSharp.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteE",
+    "folder": "block",
+    "file": "PlayNoteE.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteF",
+    "folder": "block",
+    "file": "PlayNoteF.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteFSharp",
+    "folder": "block",
+    "file": "PlayNoteFSharp.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteG",
+    "folder": "block",
+    "file": "PlayNoteG.png",
+    "type": "block"
+  },
+  {
+    "label": "PlayNoteGSharp",
+    "folder": "block",
+    "file": "PlayNoteGSharp.png",
+    "type": "block"
+  },
+  {
     "label": "Poison Trap",
     "folder": "block",
     "file": "Poison Trap.png",
@@ -1416,15 +1542,15 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
-    "label": "Skull Block",
+    "label": "SkullBlock",
     "folder": "block",
-    "file": "Skull Block.png",
+    "file": "SkullBlock.png",
     "type": "block"
   },
   {
-    "label": "SkullBlockGolden",
+    "label": "SkullBlock Glow",
     "folder": "block",
-    "file": "SkullBlockGolden.png",
+    "file": "SkullBlock_Glow.png",
     "type": "block"
   },
   {
@@ -1578,6 +1704,12 @@ const ASSET_LIST = [
     "type": "block"
   },
   {
+    "label": "Tree Trunk Block Alt",
+    "folder": "block",
+    "file": "Tree Trunk Block_Alt.png",
+    "type": "block"
+  },
+  {
     "label": "Turqoise Jewel Block",
     "folder": "block",
     "file": "Turqoise Jewel Block.png",
@@ -1593,6 +1725,12 @@ const ASSET_LIST = [
     "label": "Unholy Ground",
     "folder": "block",
     "file": "Unholy Ground.png",
+    "type": "block"
+  },
+  {
+    "label": "Unholy Ground Glow",
+    "folder": "block",
+    "file": "Unholy Ground_Glow.png",
     "type": "block"
   },
   {
@@ -1689,6 +1827,54 @@ const ASSET_LIST = [
     "label": "Wood Wall",
     "folder": "block",
     "file": "Wood Wall.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHull",
+    "folder": "block",
+    "file": "WoodenShipHull.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullEnforced",
+    "folder": "block",
+    "file": "WoodenShipHullEnforced.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullEnforced Alt",
+    "folder": "block",
+    "file": "WoodenShipHullEnforced_Alt.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullFramed",
+    "folder": "block",
+    "file": "WoodenShipHullFramed.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullFramed Alt",
+    "folder": "block",
+    "file": "WoodenShipHullFramed_Alt.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullNailed",
+    "folder": "block",
+    "file": "WoodenShipHullNailed.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHullNailed Alt",
+    "folder": "block",
+    "file": "WoodenShipHullNailed_Alt.png",
+    "type": "block"
+  },
+  {
+    "label": "WoodenShipHull Alt",
+    "folder": "block",
+    "file": "WoodenShipHull_Alt.png",
     "type": "block"
   },
   {
@@ -4590,6 +4776,48 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
+    "label": "PGAward 0",
+    "folder": "prop",
+    "file": "PGAward_0.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 1",
+    "folder": "prop",
+    "file": "PGAward_1.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 2",
+    "folder": "prop",
+    "file": "PGAward_2.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 3",
+    "folder": "prop",
+    "file": "PGAward_3.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 4",
+    "folder": "prop",
+    "file": "PGAward_4.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 5",
+    "folder": "prop",
+    "file": "PGAward_5.png",
+    "type": "prop"
+  },
+  {
+    "label": "PGAward 6",
+    "folder": "prop",
+    "file": "PGAward_6.png",
+    "type": "prop"
+  },
+  {
     "label": "Phone Line Pole",
     "folder": "prop",
     "file": "Phone Line Pole.png",
@@ -4599,6 +4827,12 @@ const ASSET_LIST = [
     "label": "Photo Booth",
     "folder": "prop",
     "file": "Photo Booth.png",
+    "type": "prop"
+  },
+  {
+    "label": "PicketFence",
+    "folder": "prop",
+    "file": "PicketFence.png",
     "type": "prop"
   },
   {
@@ -4986,9 +5220,33 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
-    "label": "Portal",
+    "label": "Portal 0",
     "folder": "prop",
-    "file": "Portal.png",
+    "file": "Portal_0.png",
+    "type": "prop"
+  },
+  {
+    "label": "Portal 1",
+    "folder": "prop",
+    "file": "Portal_1.png",
+    "type": "prop"
+  },
+  {
+    "label": "Portal 2",
+    "folder": "prop",
+    "file": "Portal_2.png",
+    "type": "prop"
+  },
+  {
+    "label": "Portal 3",
+    "folder": "prop",
+    "file": "Portal_3.png",
+    "type": "prop"
+  },
+  {
+    "label": "Portal 4",
+    "folder": "prop",
+    "file": "Portal_4.png",
     "type": "prop"
   },
   {
@@ -5700,9 +5958,27 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
-    "label": "Silver Tree Trunk",
+    "label": "Silver Tree Trunk 1",
     "folder": "prop",
-    "file": "Silver Tree Trunk.png",
+    "file": "Silver Tree Trunk 1.png",
+    "type": "prop"
+  },
+  {
+    "label": "Silver Tree Trunk 2",
+    "folder": "prop",
+    "file": "Silver Tree Trunk 2.png",
+    "type": "prop"
+  },
+  {
+    "label": "Silver Tree Trunk 3",
+    "folder": "prop",
+    "file": "Silver Tree Trunk 3.png",
+    "type": "prop"
+  },
+  {
+    "label": "Silver Tree Trunk 4",
+    "folder": "prop",
+    "file": "Silver Tree Trunk 4.png",
     "type": "prop"
   },
   {
@@ -5835,6 +6111,30 @@ const ASSET_LIST = [
     "label": "Snowy Tree Stump",
     "folder": "prop",
     "file": "Snowy Tree Stump.png",
+    "type": "prop"
+  },
+  {
+    "label": "Snowy Tree Trunk 1",
+    "folder": "prop",
+    "file": "Snowy Tree Trunk 1.png",
+    "type": "prop"
+  },
+  {
+    "label": "Snowy Tree Trunk 2",
+    "folder": "prop",
+    "file": "Snowy Tree Trunk 2.png",
+    "type": "prop"
+  },
+  {
+    "label": "Snowy Tree Trunk 3",
+    "folder": "prop",
+    "file": "Snowy Tree Trunk 3.png",
+    "type": "prop"
+  },
+  {
+    "label": "Snowy Tree Trunk 4",
+    "folder": "prop",
+    "file": "Snowy Tree Trunk 4.png",
     "type": "prop"
   },
   {
@@ -6330,9 +6630,27 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
-    "label": "Tree Trunk",
+    "label": "TreeTrunk1",
     "folder": "prop",
-    "file": "Tree Trunk.png",
+    "file": "TreeTrunk1.png",
+    "type": "prop"
+  },
+  {
+    "label": "TreeTrunk2",
+    "folder": "prop",
+    "file": "TreeTrunk2.png",
+    "type": "prop"
+  },
+  {
+    "label": "TreeTrunk3",
+    "folder": "prop",
+    "file": "TreeTrunk3.png",
+    "type": "prop"
+  },
+  {
+    "label": "TreeTrunk4",
+    "folder": "prop",
+    "file": "TreeTrunk4.png",
     "type": "prop"
   },
   {
@@ -6372,15 +6690,39 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
-    "label": "Twisted Tree Pillar",
+    "label": "TwistedWoodPillar both",
     "folder": "prop",
-    "file": "Twisted Tree Pillar.png",
+    "file": "TwistedWoodPillar_both.png",
     "type": "prop"
   },
   {
-    "label": "Underwater Column",
+    "label": "TwistedWoodPillar bottom",
     "folder": "prop",
-    "file": "Underwater Column.png",
+    "file": "TwistedWoodPillar_bottom.png",
+    "type": "prop"
+  },
+  {
+    "label": "TwistedWoodPillar center1",
+    "folder": "prop",
+    "file": "TwistedWoodPillar_center1.png",
+    "type": "prop"
+  },
+  {
+    "label": "TwistedWoodPillar center2",
+    "folder": "prop",
+    "file": "TwistedWoodPillar_center2.png",
+    "type": "prop"
+  },
+  {
+    "label": "UnderwaterColumn1",
+    "folder": "prop",
+    "file": "UnderwaterColumn1.png",
+    "type": "prop"
+  },
+  {
+    "label": "UnderwaterColumn2",
+    "folder": "prop",
+    "file": "UnderwaterColumn2.png",
     "type": "prop"
   },
   {
@@ -6756,6 +7098,18 @@ const ASSET_LIST = [
     "type": "prop"
   },
   {
+    "label": "WoodenCupboard",
+    "folder": "prop",
+    "file": "WoodenCupboard.png",
+    "type": "prop"
+  },
+  {
+    "label": "WoodenSignPlanks",
+    "folder": "prop",
+    "file": "WoodenSignPlanks.png",
+    "type": "prop"
+  },
+  {
     "label": "World Hologram",
     "folder": "prop",
     "file": "World Hologram.png",
@@ -6870,6 +7224,156 @@ const ASSET_LIST = [
     "type": "water"
   },
   {
+    "label": "AcidFall",
+    "folder": "water",
+    "file": "AcidFall.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 0",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 1",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 2",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 3",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 4",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 5",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 6",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial bottom 7",
+    "folder": "water",
+    "file": "AcidFallSpecial_bottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 0",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 1",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 2",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 3",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 4",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 5",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 6",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial topbottom 7",
+    "folder": "water",
+    "file": "AcidFallSpecial_topbottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 0",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_0.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 1",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_1.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 2",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_2.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 3",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_3.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 4",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_4.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 5",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_5.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 6",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_6.png",
+    "type": "water"
+  },
+  {
+    "label": "AcidFallSpecial top 7",
+    "folder": "water",
+    "file": "AcidFallSpecial_top_7.png",
+    "type": "water"
+  },
+  {
     "label": "Acid Alt",
     "folder": "water",
     "file": "Acid_Alt.png",
@@ -6879,6 +7383,156 @@ const ASSET_LIST = [
     "label": "Blood",
     "folder": "water",
     "file": "Blood.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFall",
+    "folder": "water",
+    "file": "BloodFall.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 0",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 1",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 2",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 3",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 4",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 5",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 6",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial bottom 7",
+    "folder": "water",
+    "file": "BloodFallSpecial_bottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 0",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 1",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 2",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 3",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 4",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 5",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 6",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial topbottom 7",
+    "folder": "water",
+    "file": "BloodFallSpecial_topbottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 0",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_0.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 1",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_1.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 2",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_2.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 3",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_3.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 4",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_4.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 5",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_5.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 6",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_6.png",
+    "type": "water"
+  },
+  {
+    "label": "BloodFallSpecial top 7",
+    "folder": "water",
+    "file": "BloodFallSpecial_top_7.png",
     "type": "water"
   },
   {
@@ -6924,6 +7578,156 @@ const ASSET_LIST = [
     "type": "water"
   },
   {
+    "label": "WaterClearFall",
+    "folder": "water",
+    "file": "WaterClearFall.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 0",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 1",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 2",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 3",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 4",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 5",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 6",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial bottom 7",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_bottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 0",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 1",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 2",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 3",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 4",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 5",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 6",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial topbottom 7",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_topbottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 0",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 1",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 2",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 3",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 4",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 5",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 6",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterClearFallSpecial top 7",
+    "folder": "water",
+    "file": "WaterClearFallSpecial_top_7.png",
+    "type": "water"
+  },
+  {
     "label": "WaterClear Alt",
     "folder": "water",
     "file": "WaterClear_Alt.png",
@@ -6936,9 +7740,309 @@ const ASSET_LIST = [
     "type": "water"
   },
   {
+    "label": "WaterDarkRiverFall",
+    "folder": "water",
+    "file": "WaterDarkRiverFall.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 0",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 1",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 2",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 3",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 4",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 5",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 6",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial bottom 7",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_bottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 0",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 1",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 2",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 3",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 4",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 5",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 6",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial topbottom 7",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_topbottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 0",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 1",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 2",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 3",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 4",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 5",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 6",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterDarkRiverFallSpecial top 7",
+    "folder": "water",
+    "file": "WaterDarkRiverFallSpecial_top_7.png",
+    "type": "water"
+  },
+  {
     "label": "WaterDarkRiver Alt",
     "folder": "water",
     "file": "WaterDarkRiver_Alt.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFall",
+    "folder": "water",
+    "file": "WaterFall.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 0",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 1",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 2",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 3",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 4",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 5",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 6",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial bottom 7",
+    "folder": "water",
+    "file": "WaterFallSpecial_bottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 0",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 1",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 2",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 3",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 4",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 5",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 6",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial topbottom 7",
+    "folder": "water",
+    "file": "WaterFallSpecial_topbottom_7.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 0",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_0.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 1",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_1.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 2",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_2.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 3",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_3.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 4",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_4.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 5",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_5.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 6",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_6.png",
+    "type": "water"
+  },
+  {
+    "label": "WaterFallSpecial top 7",
+    "folder": "water",
+    "file": "WaterFallSpecial_top_7.png",
     "type": "water"
   },
   {
@@ -7578,6 +8682,12 @@ const ASSET_LIST = [
     "type": "wall"
   },
   {
+    "label": "Moon Background",
+    "folder": "background",
+    "file": "Moon Background.png",
+    "type": "wall"
+  },
+  {
     "label": "NonSlipMetal",
     "folder": "background",
     "file": "NonSlipMetal.png",
@@ -7605,6 +8715,96 @@ const ASSET_LIST = [
     "label": "PatterbedMetalBackground",
     "folder": "background",
     "file": "PatterbedMetalBackground.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground1",
+    "folder": "background",
+    "file": "PetShopBackground1.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground10",
+    "folder": "background",
+    "file": "PetShopBackground10.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground11",
+    "folder": "background",
+    "file": "PetShopBackground11.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground12",
+    "folder": "background",
+    "file": "PetShopBackground12.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground13",
+    "folder": "background",
+    "file": "PetShopBackground13.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground14",
+    "folder": "background",
+    "file": "PetShopBackground14.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground15",
+    "folder": "background",
+    "file": "PetShopBackground15.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground2",
+    "folder": "background",
+    "file": "PetShopBackground2.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground3",
+    "folder": "background",
+    "file": "PetShopBackground3.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground4",
+    "folder": "background",
+    "file": "PetShopBackground4.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground5",
+    "folder": "background",
+    "file": "PetShopBackground5.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground6",
+    "folder": "background",
+    "file": "PetShopBackground6.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground7",
+    "folder": "background",
+    "file": "PetShopBackground7.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground8",
+    "folder": "background",
+    "file": "PetShopBackground8.png",
+    "type": "wall"
+  },
+  {
+    "label": "PetShopBackground9",
+    "folder": "background",
+    "file": "PetShopBackground9.png",
     "type": "wall"
   },
   {
@@ -7803,6 +9003,12 @@ const ASSET_LIST = [
     "label": "PixelBackgroundWhite",
     "folder": "background",
     "file": "PixelBackgroundWhite.png",
+    "type": "wall"
+  },
+  {
+    "label": "PlywoodWallpaper",
+    "folder": "background",
+    "file": "PlywoodWallpaper.png",
     "type": "wall"
   },
   {

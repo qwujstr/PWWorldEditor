@@ -1,6 +1,8 @@
-// world size
 const GRID_X = 80, GRID_Y = 60, TILE = 32;
 const BASE_PATH = 'textures/blocks/';
+
+let globalFrame = 0;
+setInterval(() => { globalFrame++; }, 150);
 
 let blockLibrary = [];
 const backgroundLibrary = [
@@ -27,7 +29,7 @@ let bucketBlock = null, shapeBlock = null;
 let targetBlockForReplace = null;
 
 let scale = 0.8, posX = 0, posY = 0;
-let isPanning = false, isDrawing = false, showGrid = true;
+let isPanning = false, isDrawing = false, showGrid = false;
 let shapeStart = null;
 const imgCache = {};
 
@@ -36,22 +38,61 @@ function autoLoadAssets() {
         console.error("ASSET_LIST is missing");
         return;
     }
-    blockLibrary = ASSET_LIST.map(asset => ({
-        name: asset.label || asset.file.replace('.png', '').replace(/_/g, ' '),
-        fileName: asset.file,
-        type: asset.folder === 'background' ? 'wall' : (asset.folder === 'water' ? 'water' : (asset.folder === 'prop' ? 'prop' : 'block')),
-        texture: `${BASE_PATH}${asset.folder}/${asset.file}`,
-        folder: asset.folder
-    }));
+    blockLibrary = ASSET_LIST.map(asset => {
+        const cleanName = asset.file
+            .replace('_0.png', '')
+            .replace('.png', '')
+            .replace(/_/g, ' ');
+
+        return {
+            name: cleanName,
+            fileName: asset.file,
+            type: asset.folder === 'background' ? 'wall' : (asset.folder === 'water' ? 'water' : (asset.folder === 'prop' ? 'prop' : 'block')),
+            texture: `${BASE_PATH}${asset.folder}/${asset.file}`,
+            folder: asset.folder
+        };
+    });
+    generateDefaultFloor();
     initUI();
+    function generateDefaultFloor() {
+        const findBlock = (filename) => blockLibrary.find(b => b.fileName === filename);
+
+        const bedrock = findBlock('Bedrock.png');
+        const lavaRock = findBlock('End Lava Rock.png');
+        const lava = findBlock('End Lava.png');
+
+        for (let x = 0; x < GRID_X; x++) {
+            if (bedrock) fgData[x][57] = JSON.parse(JSON.stringify(bedrock));
+            if (lavaRock) fgData[x][58] = JSON.parse(JSON.stringify(lavaRock));
+            if (lava) fgData[x][59] = JSON.parse(JSON.stringify(lava));
+        }
+    }
 }
 
 function getBlockTexture(x, y, block) {
     if (!block) return null;
-    const altName = block.fileName.replace('.png', '_Alt.png');//alt block check, basically used for soils when they have this grass texture on top
+    if (block.fileName.includes('_0.png')) {
+        const baseName = block.fileName.replace('_0.png', '');
+        const frames = ASSET_LIST.filter(a =>
+            a.file.startsWith(baseName + '_') && a.folder === block.folder
+        );
+
+        if (frames.length > 1) {
+            const speed = 150; // ms per frame
+            const currentFrame = Math.floor(performance.now() / speed) % frames.length;
+            const animatedFileName = `${baseName}_${currentFrame}.png`;
+            return getImg(`${BASE_PATH}${block.folder}/${animatedFileName}`);
+        }
+    }
+    const altName = block.fileName.replace('.png', '_Alt.png');
     const isTopExposed = y === 0 || (fgData[x][y-1] === null || fgData[x][y-1]?.type === 'prop');
-    const hasAlt = ASSET_LIST.some(a => a.file === altName);
-    return (isTopExposed && hasAlt) ? getImg(`${BASE_PATH}${block.folder}/${altName}`) : getImg(block.texture);
+    const hasAlt = ASSET_LIST.some(a => a.file === altName && a.folder === block.folder);
+
+    if (isTopExposed && hasAlt) {
+        return getImg(`${BASE_PATH}${block.folder}/${altName}`);
+    }
+
+    return getImg(block.texture);
 }
 
 function saveHistory() {
@@ -89,36 +130,49 @@ function initUI() {
     [invList, bucketList, shapesList, bgList, replaceSuggestions].forEach(l => { if(l) l.innerHTML = ''; });
 
     blockLibrary.forEach(b => {
-        if(b.fileName.includes('_Alt')) return;
+        if (b.fileName.includes('_Alt') || b.fileName.includes('_Glow')) return;
+
+        const frameMatch = b.fileName.match(/_(\d+)\.png$/);
+        if (frameMatch && frameMatch[1] !== "0") return;
+
+        const uiDisplayName = b.fileName
+            .replace('_0.png', '')
+            .replace('.png', '')
+            .replace(/_/g, ' ');
+
         const createBtn = (container, callback) => {
             const btn = document.createElement('div');
             btn.className = 'block-btn';
-            btn.innerHTML = `<img src="${b.texture}"><span>${b.name}</span>`;
+            btn.innerHTML = `<img src="${b.texture}"><span>${uiDisplayName}</span>`;
             btn.onclick = () => callback(b);
             container.appendChild(btn);
         };
 
         createBtn(invList, (block) => {
-            for(let i=1; i<10; i++) {
-                if(!hotbar[i]) {
-                    hotbar[i] = block;
-                    document.querySelectorAll('.slot')[i].innerHTML = `<img src="${block.texture}">`;
-                    selectSlot(i); break;
-                }
+            let targetSlot = hotbar.findIndex((slot, idx) => idx > 0 && slot === null);
+
+            if (targetSlot === -1) {
+                targetSlot = activeSlot === 0 ? 1 : activeSlot;
             }
+
+            hotbar[targetSlot] = block;
+            const slotElements = document.querySelectorAll('.slot');
+            slotElements[targetSlot].innerHTML = `<img src="${block.texture}">`;
+
+            selectSlot(targetSlot);
             closeAll();
         });
 
-        createBtn(bucketList, (block) => { bucketBlock = block; updateToolState('bucket'); closeAll(); });
-        createBtn(shapesList, (block) => { shapeBlock = block; updateToolState('shapes'); closeAll(); });
+        if (bucketList) createBtn(bucketList, (block) => { bucketBlock = block; updateToolState('bucket'); closeAll(); });
+        if (shapesList) createBtn(shapesList, (block) => { shapeBlock = block; updateToolState('shapes'); closeAll(); });
 
         const suggest = document.createElement('div');
         suggest.className = 'block-btn';
-        suggest.innerHTML = `<img src="${b.texture}"><span>${b.name}</span>`;
+        suggest.innerHTML = `<img src="${b.texture}"><span>${uiDisplayName}</span>`;
         suggest.onclick = () => {
             targetBlockForReplace = b;
-            document.getElementById('clear-search').value = b.name;
-            document.getElementById('replace-desc').innerText = `Replacing all "${b.name}" with your active hotbar block.`;
+            document.getElementById('clear-search').value = uiDisplayName;
+            document.getElementById('replace-desc').innerText = `Replacing all "${uiDisplayName}" with your active hotbar block.`;
             document.getElementById('replace-controls').classList.remove('hidden');
             replaceSuggestions.classList.add('hidden');
         };
@@ -148,25 +202,23 @@ function updateToolState(tool) {
     activeTool = tool;
     document.getElementById('bucket-btn').classList.toggle('active-tool', tool === 'bucket');
     document.getElementById('shapes-btn').classList.toggle('active-tool', tool === 'shapes');
+    document.getElementById('pick-btn').classList.toggle('active-tool', tool === 'pick');
 
     const display = document.getElementById('block-name');
+    const formatDisplay = (txt) => txt ? txt.toUpperCase() : "NONE";
 
-    if (tool === 'bucket') {
-        const bName = bucketBlock ? bucketBlock.name : "None";
-        const bImg = bucketBlock ? `<img src="${bucketBlock.texture}" style="width:14px;height:14px;vertical-align:middle;margin-left:5px;">` : "";
-        display.innerHTML = `BUCKET (${bName})${bImg}`;
-    } else if (tool === 'shapes') {
-        const sName = shapeBlock ? shapeBlock.name : "None";
-        const sImg = shapeBlock ? `<img src="${shapeBlock.texture}" style="width:14px;height:14px;vertical-align:middle;margin-left:5px;">` : "";
-        display.innerHTML = `SHAPES (${sName})${sImg}`;
-    } else if (tool === 'move') {
-        display.innerText = "MOVE";
-    } else {
+    if (tool === 'pick') display.innerText = "PICK BLOCK";
+    else if (tool === 'bucket') display.innerHTML = `BUCKET (${formatDisplay(bucketBlock?.name)})`;
+    else if (tool === 'shapes') display.innerHTML = `SHAPES (${formatDisplay(shapeBlock?.name)})`;
+    else if (tool === 'move') display.innerText = "MOVE";
+    else {
         const block = hotbar[activeSlot];
-        display.innerText = block ? `BLOCK: ${block.name}` : "EMPTY SLOT";
+        display.innerText = block ? `BLOCK: ${formatDisplay(block.name)}` : "EMPTY SLOT";
     }
 
-    if(tool !== 'hotbar') document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+    if(tool !== 'hotbar') {
+        document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+    }
 }
 
 function selectSlot(i) {
@@ -252,6 +304,21 @@ viewport.onmousedown = (e) => {
         return;
     }
 
+    if (activeTool === 'pick') {
+        const picked = fgData[x][y] || bgData[x][y];
+        if (picked) {
+            let targetSlot = hotbar.findIndex((slot, idx) => idx > 0 && slot === null);
+            if (targetSlot === -1) targetSlot = activeSlot === 0 ? 1 : activeSlot;
+
+            hotbar[targetSlot] = JSON.parse(JSON.stringify(picked));
+            const slotElements = document.querySelectorAll('.slot');
+            slotElements[targetSlot].innerHTML = `<img src="${picked.texture}">`;
+
+            selectSlot(targetSlot);
+        }
+        return;
+    }
+
     saveHistory();
     if(activeTool === 'bucket') {
         if(e.button === 0) {
@@ -302,7 +369,7 @@ function handlePlace(e) {
 
     if (e.buttons === 1) {
         const b = hotbar[activeSlot];
-        if (!b) return;
+        if (!b || activeSlot === 0) return;
         if (b.type === 'wall') bgData[x][y] = JSON.parse(JSON.stringify(b));
         else fgData[x][y] = JSON.parse(JSON.stringify(b));
     }
@@ -345,24 +412,117 @@ function drawShape(x1, y1, x2, y2) {
     }
 }
 
-function render() {
-    ctx.clearRect(0,0, canvas.width, canvas.height);
-    for(let x=0; x<GRID_X; x++) {
-        for(let y=0; y<GRID_Y; y++) {
-            if(bgData[x][y]) ctx.drawImage(getBlockTexture(x, y, bgData[x][y]), x*TILE, y*TILE, TILE, TILE);
-            if(fgData[x][y]) ctx.drawImage(getBlockTexture(x, y, fgData[x][y]), x*TILE, y*TILE, TILE, TILE);
+function render(time) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const glowAlpha = (Math.sin(time * 0.002) + 1) / 2;
+
+    for (let x = 0; x < GRID_X; x++) {
+        for (let y = 0; y < GRID_Y; y++) {
+            [bgData[x][y], fgData[x][y]].forEach(block => {
+                if (!block) return;
+
+                const baseTex = getBlockTexture(x, y, block);
+                if (!baseTex) return;
+
+                ctx.drawImage(baseTex, x * TILE, y * TILE, TILE, TILE);
+
+                const glowName = block.fileName.replace('.png', '_Glow.png');
+                const hasGlow = ASSET_LIST.some(a => a.file === glowName && a.folder === block.folder);
+
+                if (hasGlow) {
+                    const glowTex = getImg(`${BASE_PATH}${block.folder}/${glowName}`);
+                    if (glowTex && glowTex.complete) {
+                        ctx.save();
+                        ctx.globalAlpha = glowAlpha;
+                        ctx.drawImage(glowTex, x * TILE, y * TILE, TILE, TILE);
+                        ctx.restore();
+                    }
+                }
+            });
         }
     }
-    if(showGrid) {
+
+    if (showGrid) {
         ctx.strokeStyle = "rgba(255,255,255,0.05)";
-        for(let i=0; i<=GRID_X; i++) { ctx.beginPath(); ctx.moveTo(i*TILE,0); ctx.lineTo(i*TILE,canvas.height); ctx.stroke(); }
-        for(let i=0; i<=GRID_Y; i++) { ctx.beginPath(); ctx.moveTo(0,i*TILE); ctx.lineTo(canvas.width,i*TILE); ctx.stroke(); }
+        for (let i = 0; i <= GRID_X; i++) {
+            ctx.beginPath(); ctx.moveTo(i * TILE, 0); ctx.lineTo(i * TILE, canvas.height); ctx.stroke();
+        }
+        for (let i = 0; i <= GRID_Y; i++) {
+            ctx.beginPath(); ctx.moveTo(0, i * TILE); ctx.lineTo(canvas.width, i * TILE); ctx.stroke();
+        }
     }
+
     requestAnimationFrame(render);
 }
 
-window.onkeydown = (e) => { if(e.ctrlKey && e.key === 'z') undo(); };
+const pickBtn = document.getElementById('pick-btn');
+if (pickBtn) {
+    pickBtn.onclick = () => updateToolState('pick');
+}
+
+window.onkeydown = (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    if (e.ctrlKey && e.key.toLowerCase() === 'z') {
+        e.preventDefault();
+        undo();
+        return;
+    }
+
+    const key = e.key.toLowerCase();
+
+    if (key === 'f') updateToolState('bucket');
+    if (key === 's') updateToolState('shapes');
+    if (key === 'k') updateToolState('pick');
+    if (key === 'm') selectSlot(0);
+
+    if (e.key >= '1' && e.key <= '9') {
+        selectSlot(parseInt(e.key));
+    }
+    if (e.key === '0') {
+        selectSlot(0);
+    }
+};
+
+document.getElementById('screenshot-btn').onclick = () => {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = canvas.width;
+    tempCanvas.height = canvas.height;
+    const tempCtx = tempCanvas.getContext('2d');
+    if (activeAtmosphere) {
+        const bgImg = getImg(`textures/orbs/${activeAtmosphere}`);
+        if (bgImg && bgImg.complete) {
+            tempCtx.drawImage(bgImg, 0, 0, tempCanvas.width, tempCanvas.height);
+        } else {
+            tempCtx.fillStyle = "#1a1a1a";
+            tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+        }
+    } else {
+        tempCtx.fillStyle = "#000";
+        tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+    }
+    for (let x = 0; x < GRID_X; x++) {
+        for (let y = 0; y < GRID_Y; y++) {
+            if (bgData[x][y]) {
+                const tex = getBlockTexture(x, y, bgData[x][y]);
+                if (tex) tempCtx.drawImage(tex, x * TILE, y * TILE, TILE, TILE);
+            }
+            if (fgData[x][y]) {
+                const tex = getBlockTexture(x, y, fgData[x][y]);
+                if (tex) tempCtx.drawImage(tex, x * TILE, y * TILE, TILE, TILE);
+            }
+        }
+    }
+    const link = document.createElement('a');
+    link.download = `PW_World_Export_${Date.now()}.png`;
+    link.href = tempCanvas.toDataURL("image/png");
+    link.click();
+};
+
+document.querySelectorAll('.slot').forEach(s => {
+    s.onclick = () => selectSlot(parseInt(s.dataset.slot));
+});
+
 autoLoadAssets();
-document.querySelectorAll('.slot').forEach(s => s.onclick = () => selectSlot(parseInt(s.dataset.slot)));
 updateTransform();
 render();

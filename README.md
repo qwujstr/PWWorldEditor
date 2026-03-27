@@ -1,14 +1,14 @@
 <p align="center">
   <a href="https://qwujstr.github.io/PWWorldEditor/">
-    <img src="https://i.imgur.com/XIJa8Le.png" alt="PW World Editor Banner" />
+    <img src="https://i.imgur.com/WKwdmfq.jpeg" alt="PW World Editor Banner" />
   </a>
 </p>
-<p align="center">
+<p align="left">
   <a href="https://donatepay.eu/don/qwu">
-    <img src="https://i.imgur.com/h8oTXTg.png" alt="Support Me" width="300"/>
+    <img src="https://i.imgur.com/h8oTXTg.png" alt="Support Me" width="250"/>
   </a>
   <a href="https://discord.gg/hKrE49QEc7">
-    <img src="https://i.imgur.com/jOOTe91.png" alt="Discord" width="300"/>
+    <img src="https://i.imgur.com/jOOTe91.png" alt="Discord" width="250"/>
   </a>
 </p>
 
@@ -21,14 +21,18 @@ Simple and easy-to-use world editor for Pixel Worlds.
 Adding blocks is extremely simple:
 
 Just put your image as:
-  ```
-  BlockName.png
-  ```
+```
+BlockName.png
+```
 If your block has grass on top (soil style), name it like this:
-  ```
+```
 BlockName_Alt.png
 ```
-That's it the code will add it to inventory tab automatically, but make sure to add it to the right folder, if its a prop add it to /props.
+If your block is animated make sure it's frames have _0 _1 at the end or _Glow if it's using glow animation. Example:
+```
+BlockName_0.png BlockName_Glow.png
+```
+That's it the code will add it to inventory tab automatically, but make sure to add it to the right folder, if its a prop add it to /props. and names must not mismatch!
 
 ## Features
 - Drag & drop to add new blocks
@@ -38,5 +42,7 @@ That's it the code will add it to inventory tab automatically, but make sure to 
 - General block replacement
 - Bucket tool
 - Shapes Tool
+- Block pick tool
+- Screenshot button - saves your world as .png
 
 Enjoy building 👋😀

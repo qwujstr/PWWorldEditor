@@ -38,7 +38,7 @@ That's it the code will add it to inventory tab automatically, but make sure to 
 
 <p align="left">
   <a>
-    <img src="https://i.imgur.com/kYj1bFo.png" alt="Screenshot" width="600"/>
+    <img src="https://i.imgur.com/1xxkRLa.png" alt="Screenshot" width="600"/>
   </a>
 </p>
 
@@ -51,5 +51,6 @@ That's it the code will add it to inventory tab automatically, but make sure to 
 - Shapes tool
 - Block pick tool
 - Screenshot button - saves your world as .png
+- X and Y coordinates tooltip
 
 Enjoy building 👋😀
